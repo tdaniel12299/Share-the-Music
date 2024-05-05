@@ -1,3 +1,5 @@
 from django.shortcuts import render
+from django.http import HttpResponse
 
-# Create your views here.
+def main(request): #urls will point to this func to display where the path goes
+    return HttpResponse("Hello")

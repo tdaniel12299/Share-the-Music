@@ -14,9 +14,12 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+
+# this is where the main urls will be placed when typed 
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', include('api.url')), #empty string in path leads to home page, home will link to api urls
 ]
