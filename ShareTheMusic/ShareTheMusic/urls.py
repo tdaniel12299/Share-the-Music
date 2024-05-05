@@ -21,5 +21,5 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('api.urls')), #empty string in path leads to home page, home will link to api urls
+    path('', include('api.urls')), #empty string in path means to home page, will send us to api urls
 ]
