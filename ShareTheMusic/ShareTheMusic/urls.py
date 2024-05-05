@@ -19,7 +19,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include 
 
+#empty string in path means to home page, will send us to api urls
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('api.urls')), #empty string in path means to home page, will send us to api urls
+    path('', include('api.urls')) 
 ]
